@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
 import { HealthUiModule } from '../../projects/health-ui-lib/src/lib/health-ui.module';
 
 /**
@@ -10,7 +9,7 @@ import { HealthUiModule } from '../../projects/health-ui-lib/src/lib/health-ui.m
   selector: 'app-showcase',
   standalone: true,
   imports: [HealthUiModule],
-  providers: [provideAnimations()],
+  // Note: Avoid component-level animation providers to keep SSR safe.
   template: `
   <health-header-toolbar>
     <div left class="flex items-center gap-2">

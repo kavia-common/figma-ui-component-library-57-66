@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { provideAnimations } from '@angular/platform-browser/animations';
 
 /* Import the local library module directly from the projects path */
 import { HealthUiModule } from '../../projects/health-ui-lib/src/lib/health-ui.module';
@@ -15,7 +14,7 @@ import { HealthUiModule } from '../../projects/health-ui-lib/src/lib/health-ui.m
   selector: 'app-health-dashboard',
   standalone: true,
   imports: [HealthUiModule, RouterLink],
-  providers: [provideAnimations()],
+  // Note: Do not provide animations at the component level to avoid SSR feature initialization issues.
   template: `
   <health-header-toolbar ariaLabel="Health Monitor Application Header">
     <div left class="flex items-center gap-2">
