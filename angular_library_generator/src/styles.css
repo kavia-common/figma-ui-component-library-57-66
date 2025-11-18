@@ -1,12 +1,59 @@
-/* Global styles for minimalistic design */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ocean Professional CSS variables (tokens) */
+:root{
+  --primary:#2563EB;
+  --secondary:#F59E0B;
+  --accent-green:#22C55E;
+  --accent-amber:#F59E0B;
+  --accent-orange:#FB923C;
+  --accent-pink:#F472B6;
+  --accent-red:#EF4444;
+
+  --bg-canvas:#F9FAFB;
+  --card-bg:#FFFFFF;
+  --text-primary:#111827;
+  --text-secondary:#6B7280;
+  --text-muted:#9CA3AF;
+  --border-subtle:#E5E7EB;
+  --shadow:0 2px 10px rgba(17,24,39,0.06);
+
+  --radius-card:12px;
+  --radius-chip:999px;
+
+  --focus-ring: 0 0 0 3px rgba(37,99,235,.2);
+
+  /* chip backgrounds */
+  --chip-normal-bg:#E8F7EE;
+  --chip-warning-bg:#FFF4E5;
+  --chip-anomaly-bg:#FDEFEA;
+  --chip-offline-bg:#FDE7EC;
+
+  /* chart tokens */
+  --chart-grid: rgba(107,114,128,0.14);
 }
+
+/* Global styles for minimalistic design */
+*{ margin:0; padding:0; box-sizing:border-box }
 
 html, body {
   height: 100%;
-  background-color: #ffffff;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* PrimeNG base alignment with Tailwind */
+.p-component, .p-inputtext, .p-dropdown, .p-multiselect, .p-calendar, .p-inputwrapper {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* A11y utility mirrored from design */
+.visually-hidden{
+  position:absolute !important; width:1px; height:1px;
+  overflow:hidden; clip:rect(1px,1px,1px,1px); clip-path:inset(50%);
+  white-space:nowrap;
 }

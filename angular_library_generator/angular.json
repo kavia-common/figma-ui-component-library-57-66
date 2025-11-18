@@ -3,6 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "health-ui-lib": {
+      "projectType": "library",
+      "root": "projects/health-ui-lib",
+      "sourceRoot": "projects/health-ui-lib/src",
+      "prefix": "health",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/health-ui-lib/tsconfig.lib.json",
+            "project": "projects/health-ui-lib/ng-package.json"
+          }
+        }
+      }
+    },
     "angular": {
       "projectType": "application",
       "schematics": {},
@@ -27,6 +42,7 @@
               }
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
               "src/styles.css"
             ],
             "scripts": [],

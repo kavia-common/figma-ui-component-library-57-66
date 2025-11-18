@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { ShowcaseComponent } from './showcase.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [ShowcaseComponent],
+  template: `<app-showcase></app-showcase>`,
 })
-export class AppComponent {
-  title = 'angular_library_generator is being generated';
-}
+export class AppComponent { }
