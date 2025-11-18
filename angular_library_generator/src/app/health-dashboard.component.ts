@@ -34,7 +34,7 @@ import { HealthUiModule } from '../../projects/health-ui-lib/src/lib/health-ui.m
     </div>
   </health-header-toolbar>
 
-  <main class="max-w-[1160px] mx-auto p-4">
+  <main class="max-w-[1160px] mx-auto p-6">
     <section class="flex items-end justify-between mb-3">
       <div>
         <h1 class="text-[20px] font-semibold">Welcome, Jane Doe!</h1>
