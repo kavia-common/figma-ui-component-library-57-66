@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { ShowcaseComponent } from './showcase.component';
+import { RouterOutlet } from '@angular/router';
 
+/**
+ * App root component hosting RouterOutlet so routes render pages.
+ */
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ShowcaseComponent],
-  template: `<app-showcase></app-showcase>`,
+  imports: [RouterOutlet],
+  template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent { }

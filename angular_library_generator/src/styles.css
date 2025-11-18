@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ocean Professional CSS variables (tokens) */
+/* Ocean Professional CSS variables (tokens) - consumed by health-ui-lib components */
 :root{
   --primary:#2563EB;
   --secondary:#F59E0B;
